@@ -92,3 +92,7 @@ if __name__ == '__main__':
     import threading
     threading.Thread(target=check_expired_subs).start()
     bot.polling()
+  if __name__ == '__main__':
+    import threading
+    threading.Thread(target=check_expired_subs, daemon=True).start()
+    bot.polling(none_stop=True)
